@@ -1,0 +1,64 @@
+https://www.youtube.com/watch?v=aSXitOevqA0&list=PLriKzYyLb28nUFbe0Y9d-19uVkOnhYxFE&index=8
+
+
+format,categories,tags,featured imge ==> post
+
+template==> page
+
+
+
+
+
+
+1==>page-editing: change specific page
+
+the ways are:
+
+1. create a page for the specific page with the changes.
+eg. page-contactus.php
+
+description: mention all the changes you want to make in this page.and wordpress will take these changes and apply to tht page.
+
+you can create the pages by name or id.
+
+name=> page-pagename.php
+id=> page-pageid.php
+
+
+2.this changes can be applied to many pages directly.(page template)
+
+step1=> create a page with page-notitle.php
+        page- is the default way followed by the shortname of thec change.
+
+step2=> copy and paste the index page content
+step3=> very first,in php tag open and close comment and put the template name.
+
+eg. /* Template Name: Page no title */  
+
+step4=> go to the wordress admin panel,open a page and find the page template section and select the option that we created    
+
+
+
+
+2==>post formats:manage the differnt posts
+
+after creating the post formats in frontend,assign the it to the posts.
+
+come in the sections wherethe posts in echo
+
+create apage called content.php and put the default template part in it.
+
+craete each page for each post format,so that we can edit the viewing part of the posts the way we want.
+
+create the function called get_template_part('content',get_post_fomat());  => this will redirect the posts based on its formats.
+if thr standard format,thn it will call the content.php page(which is s default format)
+
+
+
+3==> content-image.php or sameworks as single-filename.php for editing
+
+
+4==> to see errors
+
+go to wp_config.php=>set WP_DEBUG to true
+
